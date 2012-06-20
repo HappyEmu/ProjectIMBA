@@ -88,6 +88,7 @@
     <Compile Include="Entities\StaticEntity.cs" />
     <Compile Include="Entities\World.cs" />
     <Compile Include="Entities\WorldEntity.cs" />
+    <Compile Include="Triangulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

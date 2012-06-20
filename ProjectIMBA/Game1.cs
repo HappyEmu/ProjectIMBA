@@ -22,14 +22,17 @@ namespace ProjectIMBA
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
 		World world;
+		Polygon p;
+		BasicEffect effect;
 
 		public Game1()
 		{
-			graphics = new GraphicsDeviceManager(this);
+			graphics = new GraphicsDeviceManager(this);		
 
+			p = new Polygon();
 			this.world = new World(new Vector2(0, 9.81f));
 
-			Content.RootDirectory = "Content";
+			Content.RootDirectory = "Content";			
 		}
 
 		/// <summary>
@@ -40,7 +43,21 @@ namespace ProjectIMBA
 		/// </summary>
 		protected override void Initialize()
 		{
-			// TODO: Add your initialization logic here
+			effect = new BasicEffect(GraphicsDevice);
+			effect.VertexColorEnabled = true;
+			effect.World = Matrix.Identity;
+			effect.View = Matrix.CreateLookAt(new Vector3(0, 0, 5), Vector3.Zero, Vector3.Up);
+			effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver2, 16.0f / 9.0f, 1.0f, 100.0f);
+
+			p.Color = Color.Green;
+
+			p.AddEdge(0f, 0f);
+			p.AddEdge(0f, 2f);
+			p.AddEdge(2f, 2f);
+			p.AddEdge(3f, 1f);
+			p.AddEdge(2f, 0f);			
+
+			p.Triangulate();
 
 			base.Initialize();
 		}
@@ -78,6 +95,8 @@ namespace ProjectIMBA
 
 			this.world.Step(dt);
 
+			p.Rotate(2.0f * dt);
+
 			// Allows the game to exit
 			if (InputState.isPressed(Keys.Escape))
 				this.Exit();
@@ -94,9 +113,11 @@ namespace ProjectIMBA
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw(GameTime gameTime)
 		{
-			GraphicsDevice.Clear(Color.CornflowerBlue);
+			GraphicsDevice.Clear(Color.CornflowerBlue);			
+			
+			effect.CurrentTechnique.Passes[0].Apply();
 
-			// TODO: Add your drawing code here
+			p.Draw(GraphicsDevice);
 
 			base.Draw(gameTime);
 		}

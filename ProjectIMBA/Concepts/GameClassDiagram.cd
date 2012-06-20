@@ -6,7 +6,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAEAAAAAAAAQ=</HashCode>
       <FileName>Game1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,12 +52,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectIMBA.Polygon">
-    <Position X="7.25" Y="7.25" Width="2" />
+    <Position X="7.25" Y="6.5" Width="2" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAwAAAAIAAAgAACAAAgAQAEIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Polygon.cs</FileName>
     </TypeIdentifier>
   </Class>
