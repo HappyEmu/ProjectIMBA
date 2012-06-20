@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Xml.Serialization;
+using System.IO;
+using ProjectIMBA.Input;
 
 namespace ProjectIMBA
 {
@@ -18,10 +21,14 @@ namespace ProjectIMBA
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
+		World world;
 
 		public Game1()
 		{
 			graphics = new GraphicsDeviceManager(this);
+
+			this.world = new World(new Vector2(0, 9.81f));
+
 			Content.RootDirectory = "Content";
 		}
 
@@ -46,7 +53,6 @@ namespace ProjectIMBA
 		{
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch(GraphicsDevice);
-
 			// TODO: use this.Content to load your game content here
 		}
 
@@ -66,10 +72,17 @@ namespace ProjectIMBA
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Update(GameTime gameTime)
 		{
-			// Allows the game to exit
-			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-				this.Exit();
+			float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+			InputState.Update();
+
+			this.world.Step(dt);
+
+			// Allows the game to exit
+			if (InputState.isPressed(Keys.Escape))
+				this.Exit();
+			if (InputState.isPressed(Input.Action.Hit))
+				this.Exit();
 			// TODO: Add your update logic here
 
 			base.Update(gameTime);

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ProjectIMBA.Game1">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.World">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAEAAAAAAAAAAAAAAAQAAIIAAAAEAAAA=</HashCode>
+      <FileName>Entities\World.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.Hero">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.WorldEntity">
+    <Position X="3.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAIAgAAIAAAAIAAAAAAAAAQAAAAAAACA=</HashCode>
+      <FileName>Entities\WorldEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Polygon" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectIMBA.DynamicEntity">
+    <Position X="2.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAQAEAACEAAA=</HashCode>
+      <FileName>Entities\DynamicEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.StaticEntity">
+    <Position X="4.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\StaticEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.Polygon">
+    <Position X="7.25" Y="7.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Polygon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.Camera">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAUAACAAAMACAABgEBAAACQBAAABAAAIQAAEAAAEAAQ=</HashCode>
+      <FileName>Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectIMBA.Input.InputState">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAIAAAAACAAIIAAAAAAAAABAKACAAQAAA=</HashCode>
+      <FileName>Input\InputState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ProjectIMBA.IDrawable">
+    <Position X="3.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAoAgAAIAAAAIAAAAAAAEAAIAAAAAAAQ=</HashCode>
+      <FileName>IDrawable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ProjectIMBA.Input.Action" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgEAAAAAgAAAAAAAAIAAAACAAAAAAAAAAAAAAAQAAI=</HashCode>
+      <FileName>Input\InputState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
