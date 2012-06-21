@@ -46,7 +46,7 @@ namespace ProjectIMBA
 			effect = new BasicEffect(GraphicsDevice);
 			effect.VertexColorEnabled = true;
 			effect.World = Matrix.Identity;
-			effect.View = Matrix.CreateLookAt(new Vector3(0, 0, 5), Vector3.Zero, Vector3.Up);
+			effect.View = Matrix.CreateLookAt(new Vector3(0, 0, 10), Vector3.Zero, Vector3.Up);
 			effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver2, 16.0f / 9.0f, 1.0f, 100.0f);
 
 			p.Color = Color.Green;
@@ -54,8 +54,10 @@ namespace ProjectIMBA
 			p.AddEdge(0f, 0f);
 			p.AddEdge(0f, 2f);
 			p.AddEdge(2f, 2f);
-			p.AddEdge(3f, 1f);
-			p.AddEdge(2f, 0f);			
+			p.AddEdge(6f, -5f);
+			//p.AddEdge(6f, 2f);
+			p.AddEdge(2f, 0f);
+			p.Finish();
 
 			p.Triangulate();
 
@@ -90,12 +92,13 @@ namespace ProjectIMBA
 		protected override void Update(GameTime gameTime)
 		{
 			float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
+			float gt = (float)gameTime.TotalGameTime.TotalSeconds;
 
 			InputState.Update();
 
 			this.world.Step(dt);
 
-			p.Rotate(2.0f * dt);
+			p.Rotate(1.0f * dt);
 
 			// Allows the game to exit
 			if (InputState.isPressed(Keys.Escape))
